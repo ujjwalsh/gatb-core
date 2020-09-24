@@ -5,6 +5,9 @@ os:
 compiler:
 - clang
 - gcc
+arch:
+  - amd64
+  - ppc64le
 addons:
   apt:
     sources:
