@@ -22,6 +22,10 @@ script:
 - cd gatb-core
 - mkdir build
 - cd build
+- |
+  if [[ "${TRAVIS_CPU_ARCH}" == "ppc64le" ]]; then
+     sudo apt upgrade cmake
+  fi
 - cmake .. && make $MAKEFLAGS 
 - export CPPUNIT_VERBOSE=TRUE && ./bin/gatb-core-cppunit
 env:
